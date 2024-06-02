@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--HEAD-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet's Health Check Up Survey Form</title>
+    <!--Does not need a link for styling since did the style below-->
+
+
+    <!--Sty=ling of the Survey Form-->
+    <style>
+        body{
+    background-color: #272727;
+    min-width: 600px;
+    width: 800px;
+}
+
+#title{
+    margin: auto;
+    width: 500px;
+}
+
+#description{
+    width: 450px;
+    margin: auto;
+    padding: 15px;
+}
+.container{
+    background-color: grey;
+    width: auto;
+    height: 680px;
+    max-width: 650px;
+    margin:auto;
+    
+}
+
+#info{
+    height: fit-content;
+    
+}
+
+#comment{
+    width: 500px;
+    margin: 25px auto;
+    display: block;
+}
+
+#submit{
+    display: block;
+    margin: auto;
+}
+    </style>
+</head>
+<!--BODY-->
+
+<body>
+    <div class="container">
+        <h1 id="title">Pet's Health Check Up Survey Form</h1>
+        <p id="description">We strive in keeping your pet healthy, please take a few minutes to fill out this wellness
+            report.</p>
+
+        <!--SURVEY STARTS HERE-->
+        <form id="survey-form">
+            <fieldset id="info">
+                <!--Basic info-->
+                <label id="petname-label" for="pet-name">Pet's Name
+                    <input required id="petname" type="text" placeholder="Enter pet's name">
+                </label>
+                
+                <label id="name-label" for="family-name">Enter Family's Name
+                    <input required id="name" type="text" placeholder="Family's Last Name">
+                </label>
+                <br><br>
+                <label id="email-label" for="email">Email
+                    <input required id="email" type="email" placeholder="Best email to contact you">
+                </label>
+                <label for="pet-type">My Pet is a
+                    <select required id="dropdown gender">
+                        <option value="">please select one</option>
+                        <option value="1">Cat</option>
+                        <option value="2">Dog</option>
+                    </select>
+                </label>
+
+                <label id="number-label" for="number">Pet's Age
+                    <input required id="number" type="number" min="0" max="30" placeholder="Age">
+                </label>
+
+                <!--DROPDOWN SECTION-->
+                <br><br>
+                <label for="gender">Gender
+                    <select required id="dropdown">
+                        <option value="">please select</option>
+                        <option value="1">Male</option>
+                        <option value="2">Female</option>
+                    </select>
+                </label>
+            </fieldset>
+
+            <fieldset id="activity">
+                <!--RADIO BUTTON SECTION-->
+                <legend for="active" class="active">Pet is active most of the day</legend>
+                <div>
+                    <input type="radio" value="yes" name="active" checked><label>Yes</label>
+                </div>
+                <div>
+                    <input type="radio" value="no" name="active"><label>No</label>
+                </div>
+                <br>
+                <label for="aggression">Does your pet get along with other animals?
+                    <select required id="aggression">
+                        <option checked value="1">Yes</option>
+                        <option value="2">No</option>
+                    </select>
+                </label>
+            </fieldset>
+
+            <!--CHECKBOX SECTION-->
+            <fieldset id="general-health">
+                <!--OVERALL HEALTH-->
+                <legend required for="overall-health">How would you describe your pet's overall health?</legend>
+
+                <div>
+                    <input type="radio" value="excellent" name="overall-health" checked>
+                    <label for="excellent">Excellent</label>
+                </div>
+                <div>
+                    <input type="radio" value="very-good" name="overall-health">
+                    <label for="very-good">Very Good</label>
+                </div>
+                <div>
+                    <input type="radio" value="good" name="overall-health">
+                    <label for="good">Good</label>
+                </div>
+                <div>
+                    <input type="radio" value="fair" name="overall-health">
+                    <label for="fair">Fair</label>
+                </div>
+                <div>
+                    <input type="radio" value="poor" name="overall-health">
+                    <label for="poor">Poor</label>
+                </div>
+
+            </fieldset>
+
+            <fieldset id="behaves">
+                <!--CHECKBOX-->
+                <!--KNOWN HEALTH CONDITION-->
+                <legend required for="behavior">Does your pet have any behavior problems?</legend>
+                <!--OPTIONS-->
+                <div>
+                    <input type="checkbox" value="food" name="behavior" checked>
+                    <label>Food Aggression</label>
+                    </input>
+                </div>
+                <div>
+                    <input type="checkbox" value="barking" name="behavior">
+                    <label for="barking">Excessive Barking</label>
+                    </input>
+                </div>
+                <div>
+                    <input type="checkbox" value="anxiety" name="behavior">
+                    <label>Separation Anxiety</label>
+                    </input>
+                </div>
+                <div>
+                    <input type="checkbox" value="mounting" name="behavior">
+                    <label>Mounting other pets</label>
+                    </input>
+                </div>
+                <div>
+                    <input type="checkbox" value="other" name="behavior">
+                    <label for="other">Other</label>
+                    <input type="text">
+                </div>
+            </fieldset>
+            <!--TEXTAREA SECTION-->
+
+            <label for="comment">
+                <textarea id="comment" name="comment" rows="3" cols="30"
+                    placeholder="Additional Comments or Concerns (Optional)"></textarea>
+            </label>
+
+            <!--SUBMIT BUTTON-->
+            <button id="submit" type="submit" value="Submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
